@@ -34,10 +34,23 @@
 // ---------------OTROS METODOS--------------
 
   public function listarAlumnos(){
+    foreach ($lista_alumnos as $unAlumno) {
+      echo "<pre>";
+      var_dump($unAlumno);
+      echo "</pre>";
+    }
 
   }
 
   public function getProfesores(){
     return [$this->profesorTitular, $this->profesorAdjunto];
   }
+
+  public function agregarUnAlumno(Alumno $unAlumno){
+
   }
+
+  }
+
+  // permita agregar un alumno a la lista.devolverá ​true si el alumno puede agregarse
+  // o ​false en caso de que no haya cupo disponible.●
