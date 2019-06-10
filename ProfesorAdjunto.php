@@ -5,12 +5,12 @@ class ProfesorAdjunto extends Profesor
 {
   protected $cantidadHoras;
 
-// -----------------SETTERS---------------------
+// -----------------SETTERS Y GETTERS---------------------
   public function setHoras (string $unasHoras){
 
     $this->cantidadHoras = $unasHoras;
   }
-// -----------------GETTERS---------------------
+
   public function getHoras(){
     return $this->cantidadHoras;
   }

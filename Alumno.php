@@ -12,7 +12,7 @@
       $this->setApellido($unApellido);
       $this->setCodigoAlumno($unCodigo);
     }
-      // -------------------Setters ------------------
+// -----------------SETTERS Y GETTERS---------------------
     public function setNombre (string $unNombre){
 
       $this->nombre = $unNombre;
@@ -25,7 +25,7 @@
 
       $this->codigo_alumno = $unCodigo;
     }
-      // -------------------Getters ------------------
+
     public function getNombre(){
       return $this->nombre;
     }

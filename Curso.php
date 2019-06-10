@@ -13,16 +13,28 @@
     protected $max_alumnos:integer;
     protected $lista_alumnos:array(Alumno);
 
-    // -------------------Setters ------------------
+    function __construct($nombre, $codigoCurso, $cupoMaximoDealumnos)
+    {
+      $this-> setNombre ($nombre);
+      $this-> setCodigoCurso ($codigoCurso);
+      $this-> setCupo ($cupoMaximoDealumnos);
+    }
+
+// -----------------SETTERS Y GETTERS---------------------
     public function setNombre (string $unNombre){
 
       $this->nombre = $unNombre;
     }
-    public function setCodigoCursp (int $unCodigo){
+    public function setCodigoCurso (int $unCodigo){
 
       $this->codigo_curso = $unCodigo;
     }
-      // -------------------Getters ------------------
+
+    public function setCupo (int $cupoMaximoDealumnos){
+
+      $this->max_alumnos = $cupoMaximoDealumnos;
+    }
+
     public function getNombre(){
       return $this->nombre;
     }
@@ -47,10 +59,13 @@
   }
 
   public function agregarUnAlumno(Alumno $unAlumno){
+    $tamanioAntes = count($this->lista_alumnos);
+
+    $this->lista_alumnos[] = $unAlumno;
+
+    $tamanioDespues = count($this->lista_alumnos);
+
+    return !($tamanioAntes = $tamanioDespues);
 
   }
-
   }
-
-  // permita agregar un alumno a la lista.devolverá ​true si el alumno puede agregarse
-  // o ​false en caso de que no haya cupo disponible.●

@@ -7,7 +7,7 @@
     protected $antigüedad;
     protected $codigo_profesor;
 
-    // -------------------Setters ------------------
+// -----------------SETTERS Y GETTERS---------------------
     public function setNombre (string $unNombre){
 
       $this->nombre = $unNombre;
@@ -26,11 +26,11 @@
 
       $this->codigo_profesor = $unCodigo;
     }
-      // -------------------Getters ------------------
+
     public function getNombre(){
       return $this->nombre;
     }
-
+    
     public function getApellido(){
       return $this->apellido;
     }
