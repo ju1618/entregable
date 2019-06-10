@@ -7,7 +7,7 @@ include_once 'Alumno.php';
 include_once 'Curso.php';
 
 
-class DigitalHouseManager extends ProfesorAdjunto ProfesorTitular Alumno Curso
+class DigitalHouseManager implements ProfesorAdjunto ProfesorTitular Alumno Curso
 {
   protected $lista_alumnos : array(Alumno);
   protected $lista_profTitular : array(ProfesorTitular);
