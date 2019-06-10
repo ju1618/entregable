@@ -7,7 +7,8 @@ class ProfesorAdjunto extends Profesor
 
   public function __construct($nombre, $apellido, $codigoProfesor, $cantidadDeHoras)
   {
-    $this-> setNombre($nombre);
+    parent::setNombre($nombre); /*VER */
+    $this->setNombre($nombre);
     $this->setApellido($apellido);
     $this->setCodigoProfesor($codigoProfesor);
     $this->setHoras($cantidadDeHoras);

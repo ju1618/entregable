@@ -60,6 +60,7 @@
   }
 
   public function agregarUnAlumno(Alumno $unAlumno){
+    /*falta ver el tema del cupo y ver si se puede agregar. tengo que mirar el cupo*/
     $tamanioAntes = count($this->lista_alumnos);
 
     $this->lista_alumnos[] = $unAlumno;
