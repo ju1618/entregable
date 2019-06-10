@@ -4,7 +4,7 @@
   {
     protected $nombre;
     protected $apellido;
-    protected $antigüedad;
+    protected $antiguedad;
     protected $codigo_profesor;
 
 // -----------------SETTERS Y GETTERS---------------------
@@ -30,7 +30,7 @@
     public function getNombre(){
       return $this->nombre;
     }
-    
+
     public function getApellido(){
       return $this->apellido;
     }
