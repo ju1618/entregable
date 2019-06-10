@@ -1,5 +1,5 @@
 <?php
-  require_once 'Profesor.php'
+  require_once 'Profesor.php';
 
 class ProfesorTitular extends Profesor
 {

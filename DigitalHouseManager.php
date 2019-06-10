@@ -7,14 +7,14 @@ include_once 'Alumno.php';
 include_once 'Curso.php';
 
 
-class DigitalHouseManager implements ProfesorAdjunto ProfesorTitular Alumno Curso
+class DigitalHouseManager implements ProfesorAdjunto, ProfesorTitular, Alumno, Curso
 {
-  protected $lista_alumnos : array(Alumno);
-  protected $lista_profTitular : array(ProfesorTitular);
-  protected $lista_profAdjunto : array(ProfesorAdjunto);
-  protected $lista_cursos : array(Curso);
+  protected $lista_alumnos[]; /*array de objetos tipo alumnos */
+  protected $lista_profTitular[]; /*array de objetos tipo Profesor Titular */
+  protected $lista_profAdjunto[]; /*array de objetos tipo Profesor Adjunto */
+  protected $lista_cursos[]; /*array de objetos tipo Curso */
 
-  function __construct(argument)
+  function __construct()
   {
     // code...
   }
@@ -48,6 +48,11 @@ class DigitalHouseManager implements ProfesorAdjunto ProfesorTitular Alumno Curs
   public function altaAlumno($nombre, $apellido, $codigoAlumno){
     nuevoAlumno = new Alumno($nombre, $apellido, $codigoAlumno);
     $this->lista_alumnos[] = nuevoAlumno;
+
+  }
+
+  public function inscribirAlumno($codigoAlumno, $codigoCurso){
+
 
   }
 }

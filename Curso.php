@@ -4,14 +4,15 @@
   include_once 'ProfesorAdjunto.php';
   include_once 'Alumno.php';
 
-  class Curso implements ProfesorAdjunto ProfesorTitular Alumno
+  class Curso implements ProfesorAdjunto, ProfesorTitular, Alumno
   {
-    protected $nombre:string;
-    protected $codigo_curso:integer;
-    protected $profesorTitular:ProfesorTitular;
-    protected $profesorAdjunto:ProfesorAdjunto;
-    protected $max_alumnos:integer;
-    protected $lista_alumnos:array(Alumno);
+
+    protected $nombre;
+    protected $codigo_curso;
+    protected $profesorTitular;
+    protected $profesorAdjunto;
+    protected $max_alumnos;
+    protected $lista_alumnos;
 
     function __construct($nombre, $codigoCurso, $cupoMaximoDealumnos)
     {
