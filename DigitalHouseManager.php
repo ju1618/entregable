@@ -27,7 +27,7 @@ class DigitalHouseManager implements ProfesorAdjunto, ProfesorTitular, Alumno, C
 
   public function altaCurso($nombre, $codigoCurso, $cupoMaximoDealumnos){
 
-    $this->esteCurso = Curso::new Curso($nombre,$cupoMaximoDealumnos,$cantidadAlumnos,$lista_alumnos_curso);
+    $esteCurso = Curso::new Curso($nombre,$cupoMaximoDealumnos,$cantidadAlumnos,$lista_alumnos_curso);
 
     $this->lista_curso[$codigoCurso]=$esteCurso;
     //----con los datos q me dan tengo q instanciar un curso y guardarlo en la $lista_cursos
