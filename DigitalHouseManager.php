@@ -9,16 +9,16 @@ include_once 'Curso.php';
 
 class DigitalHouseManager implements ProfesorAdjunto, ProfesorTitular, Alumno, Curso
 {
-  protected $lista_alumnos_total[]; /*array de objetos tipo alumnos  */
-  protected $lista_alumnos_curso[];
-  protected $lista_profTitular[]; /*array de objetos tipo Profesor Titular */
-  protected $lista_profAdjunto[]; /*array de objetos tipo Profesor Adjunto */
-  protected $lista_cursos[]; /*array de objetos tipo Curso */
+  protected $lista_alumnos_total; /*array de objetos tipo alumnos  */
+  // protected $lista_alumnos_curso[];
+  protected $lista_profTitular; /*array de objetos tipo Profesor Titular */
+  protected $lista_profAdjunto; /*array de objetos tipo Profesor Adjunto */
+  protected $lista_cursos; /*array de objetos tipo Curso */
 
-  function __construct()
-  {
-    // code...
-  }
+  // function __construct()
+  // {
+  //   // code...
+  // }
 
   // --------------- SETTERS Y GETTERS--------------
 
@@ -27,9 +27,9 @@ class DigitalHouseManager implements ProfesorAdjunto, ProfesorTitular, Alumno, C
 
   public function altaCurso($nombre, $codigoCurso, $cupoMaximoDealumnos){
 
-    esteCurso = new Curso($nombre,$cupoMaximoDealumnos,$cantidadAlumnos,$lista_alumnos_curso[],$lista_profTitular[],$lista_profAdjunto[]);
+    $this->esteCurso = Curso::new Curso($nombre,$cupoMaximoDealumnos,$cantidadAlumnos,$lista_alumnos_curso);
 
-    $this->lista_curso[$codigoCurso]=esteCurso;
+    $this->lista_curso[$codigoCurso]=$esteCurso;
     //----con los datos q me dan tengo q instanciar un curso y guardarlo en la $lista_cursos
 
   }
@@ -64,14 +64,13 @@ class DigitalHouseManager implements ProfesorAdjunto, ProfesorTitular, Alumno, C
       echo "No hay más cupo para este curso";
     }
 
-    public function asignarProfesores($codigoCurso, $codigoProfesorTitular, $codigoProfesorAdjunto){
+  }
 
-      $this->lista_cursos[$codigoCurso][$lista_profAdjunto][]=$this->lista_profAdjunto[$codigoProfesorAdjunto];
-      $this->lista_cursos[$codigoCurso][$lista_profTitular][]=$this->lista_profTitular[$codigoProfesorTitular];
+  public function asignarProfesores($codigoCurso, $codigoProfesorTitular, $codigoProfesorAdjunto){
 
+    $this->lista_cursos[$codigoCurso][$profesorAdjunto]=$this->lista_profAdjunto[$codigoProfesorAdjunto];
+    $this->lista_cursos[$codigoCurso][$profesorTitular]=$this->lista_profTitular[$codigoProfesorTitular];
 
     }
 
-
-  }
 }

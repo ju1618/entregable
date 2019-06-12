@@ -4,7 +4,7 @@
   include_once 'ProfesorAdjunto.php';
   include_once 'Alumno.php';
 
-  class Curso implements ProfesorAdjunto, ProfesorTitular, Alumno
+  class Curso //implements ProfesorAdjunto, ProfesorTitular, Alumno
   {
 
     protected $nombre;
@@ -12,7 +12,7 @@
     protected $profesorTitular;
     protected $profesorAdjunto;
     protected $max_alumnos;
-    protected $lista_alumnos;
+    protected $lista_alumnos_curso;
 
     function __construct($nombre, $codigoCurso, $cupoMaximoDealumnos)
     {
@@ -47,7 +47,7 @@
 // ---------------OTROS METODOS--------------
 
   public function listarAlumnos(){
-    foreach ($lista_alumnos as $unAlumno) {
+    foreach ($lista_alumnos_curso as $unAlumno) {
       echo "<pre>";
       var_dump($unAlumno);
       echo "</pre>";
@@ -61,11 +61,11 @@
 
   public function agregarUnAlumno(Alumno $unAlumno){
     /*falta ver el tema del cupo y ver si se puede agregar. tengo que mirar el cupo*/
-    $tamanioAntes = count($this->lista_alumnos);
+    $tamanioAntes = count($this->lista_alumnos_curso);
 
     $this->lista_alumnos[] = $unAlumno;
 
-    $tamanioDespues = count($this->lista_alumnos);
+    $tamanioDespues = count($this->lista_alumnos_curso);
 
     return !($tamanioAntes = $tamanioDespues);
 
